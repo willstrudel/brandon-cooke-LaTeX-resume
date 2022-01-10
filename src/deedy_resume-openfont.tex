@@ -1,13 +1,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
+% Modified Deedy - One Page Two Column Resume
 % LaTeX Template
-% Version 1.1 (30/4/2014)
-%
-% Original author:
+% Version 1.0 (07/04/2020)
+% 
+% Author
+% Apur Misha(https://apurvmishra.xyz)
+% Repository
+% https://github.com/apurvmishra99/Modified-Deedy-Resume
+% Original author of Deedy Resume:
 % Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
+% His repository:
 % https://github.com/deedydas/Deedy-Resume
+%
+%
+
 %
 % IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
 %
@@ -23,30 +29,25 @@
 % 2. Figure out a smoother way for the document to flow onto the next page.
 % 3. Add styling information for a "Projects/Hacks" section.
 % 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
 % 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 % Known Issues:
 % 1. Overflows onto second page if any column's contents are more than the
 % vertical limit
-% 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \documentclass[]{deedy-resume-openfont}
-
-
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -54,107 +55,98 @@
 %     LAST UPDATED DATE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\lastupdated
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\namesection{Brandon}{Cooke}{ \urlstyle{same}\url{http://github.com/BrandonCookeDev} |
-\href{mailto:BrandonCookeDev@gmail.com}{BrandonCookeDev@gmail.com}
-}
+\namesection{Will}{Struder}{ \urlstyle{same}\href{https://willstruder.com}{\bf willstruder.com} |
+\href{mailto:willstruder@gmail.com}{\bf willstruder@gmail.com} | \bf (470)-708-1178 | \urlstyle{same}\href{https://github.com/willstrudel}{\bf Github} |
+\urlstyle{same}\href{https://www.linkedin.com/in/will-struder}{\bf Linkedin}} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %     COLUMN ONE
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[t]{0.66\textwidth} 
 
-\begin{minipage}[t]{0.33\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Education} 
-
-\subsection{Georgia Tech}
-\descript{MS in Computer Science}
-\location{ On Hiatus }
-\sectionsep
-
-\subsection{Kennesaw State}
-\descript{BS in Computer Science}
-\location{May 2014 | Kennesaw, GA}
-\location{ Cum. GPA: 3.44 / 4.0 }
-\sectionsep
-
-\subsection{Sequoyah High School}
-\location{Grad. May 2009 |  Canton, GA}
+\subsection{Georgia Institute of Technology}
+\descript{Full Stack Web Development Certificate}
+\location{September \textbf{2021 } | Atlanta, Ga}
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     LINKS
+%     EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Links} 
-Github:// \href{https://github.com/BrandonCookeDev}{\custombold{BrandonCookeDev}} \\
-LinkedIn://  \href{https://www.linkedin.com/in/BrandonCookeDev}{\custombold{BrandonCookeDev}} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Coursework}
-\subsection{Graduate}
-Advance Operating Systems \\
-Information Security \\
-Software Development Process \\
-Advanced Data Communication \\
-Advanced Network Security \\
-Knowledge Based AI
-\sectionsep
-\subsection{Undergraduate}
-Concepts of Programming Languages \\
-Programming in Linux and C \\
-Computer Architecture \\
-Operating Systems \\
-Distributed Systems
+\section{Experience}
+\runsubsection{Healthtronics}
+\descript{|\ Laser Technician }
+\location{Nov \textbf{2019 } – June \textbf{2021} | Woodstock, Ga - Huntsville, Al}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Assisted physicians during surgery using holmium, greenlight, and co2 lasers.
+\item Responsible for calculating energy levels and proper settings depending on the surgery, including fiber type/size.
+\item Regularly transported lasers and fibers between hospitals while handling inventory of supplies needed for each case each week.
+\end{tightemize}
 \sectionsep
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-\subsection{Programming}
-
-\location{Languages:}
-NodeJS \textbullet{} TypeScript \textbullet{}  Python \\
-C\# \textbullet{} Java \textbullet{} PowerShell \textbullet{} SQL \\
-C \textbullet{} C++ \textbullet{} Bash \textbullet{} ReactJS \\
-
-\location{DevOps:}
-Docker \textbullet{} Azure DevOps  \\
-Terraform \textbullet{} AWS Cloudformation \\
-Ansible \textbullet{} Github Actions \\
-
-\location{AWS: }
-ECS \textbullet{} Lambda \textbullet{} DynamoDB  \\
-EMR \textbullet{} S3 \textbullet{} CloudWatch \\
-Elastic Beanstalk \textbullet{} Elasticache  \\
-SNS/SQS \textbullet{} Route53 \textbullet{} Kinesis \\
-Application Load Balancing \\
-
-\location{Other:}
-Redux \textbullet{} HIVE  \textbullet{} PHP \\
-Flask \textbullet{} Express \textbullet{} OpenCV \\
-
-
+\runsubsection{United States Postal Service}
+\descript{| Rural Carrier Assistant }
+\location{Oct \textbf{2017 } – Nov \textbf{2019} | Woodstock, Ga}
+\begin{tightemize}
+\item Daily responsibilities included sorting, casing, delivering and receiving mail and/or packages to and from multiple dedicated routes throughout multiple cities.
+\item During my time at the USPS, I had also trained new employees on how to sort, case, and deliver mail in a safe yet timely manner. 
+\end{tightemize}
 \sectionsep
+
+\runsubsection{AT\&T}
+\descript{| Installation Technician}
+\location{Feb \textbf{2016 } - Sept \textbf{2017 } | Acworth, Ga}
+\begin{tightemize}
+\item As an Installation Technician, my time was primarily spent installing AT\&T Internet, TV, and Phone/VoIP services to residential and commercial properties.
+\item Proficient with installation of copper, fiber, and satellite dish equipment, as well as troubleshooting repair tickets.
+\end{tightemize}
+\sectionsep
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{enCapsulate}{ \urlstyle{same}\href{https://encapsulate.herokuapp.com/}{\bf encapsulate.herokuapp}}
+\descript{| MongoDB, Express, React, Node}
+\location{August \textbf{2021 }}
+\begin{tightemize}
+\item enCapsulate is the culmination of our bootcamp team, an e-commerce website deployed on Heroku. 
+\item Researched shopping trends for minimalism and ethically friendly merchandise, bringing the public a new and innovative capsule wardrobe company.
+\item Payment processing was done with the integration of the Stripe API.
+\item Express used for server, MongoDB for the database, and Bcrypt for password encryption. 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Little River Studio}{ \urlstyle{same}\href{https://littleriverstudio.org}{\bf littleriverstudio.org}}
+\descript{| React, Tailwind CSS, EmailJS}
+\location{Apr \textbf{2021 }}
+\begin{tightemize}
+\item Little River Studio is a small business offering numerous multimedia services.
+\item Built with React and Tailwind CSS, the site was designed mobile first and mobile responsive.
+\item Contact form using EmailJS, sends messages directly to personal Gmail account.
+\item Deployed with GitHub Actions, hosted on custom Google Domain using GH Pages IP address. 
+\end{tightemize}
+\sectionsep
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -162,87 +154,47 @@ Flask \textbullet{} Express \textbullet{} OpenCV \\
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\end{minipage} 
+
+\end{minipage}%
 \hfill
-\begin{minipage}[t]{0.66\textwidth} 
+\begin{minipage}[t]{0.33\textwidth} 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE
+%     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Experience}
-
-\runsubsection{RESICAP}
-\descript{| DevOps Manager }
-\location{March 2019 - Present | Atlanta, Georgia}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Architected and built RESICAP's Cloud API and FaaS-driven systems via ECS, Lambda, Aurora, S3, and EB.
-\item Created standard Dockerization process for applications.
-\item Spearheaded creation of CICD Build and Release pipelines, documentation, variable libraries, and custom scripts and tasks in Azure DevOps.
-\item Created custom Infrastructure as Code using the AWS CDK and TypeScript.
-\item Implemented .NET XUnit unit tests to cover previously uncovered applications, and put in place automated testing steps in CICD pipelines.
-\item Created .NET Core libraries for dev team to expedite common DevOps code added to all projects in RESICAP
-\end{tightemize}
-
-\sectionsep
-
-\runsubsection{ENGAGE.cx}
-\descript{| Senior Developer }
-\location{February 2017 - March 2019 | Atlanta, Georgia}
-\begin{tightemize}
-\item Created an analytics aggregating program using AWS EMR, Athena, Lambda, Hadoop, HIVE, Sqoop, and NodeJS  saving roughly 100\% in ETL costs.
-\item Crafted a sophisticated Wifi-Authentication Splash screen that aggregates user data for personal identification. Created with Node, DynamoDB, and S3.
-\item Overhauled a Presence Detecting component of CX's platform using Node, S3, Lambda, Redis, DynamoDB, Kinesis, and Elastic Beanstalk.
-\item Created a location identifying, loyalty tracking Cisco Webex chatbot leveraging NodeJS with our core software platform.
-\item Used Node and MySQL and AWS Cloudformation to maximize the efficiency of CX's deployment strategy.
-\item Created multiple Responsys integration scripts using NodeJS and EC2.
-\end{tightemize}
-\sectionsep
-
-\runsubsection{AT\&T}
-\descript{| Specialist Applications Developer }
-\location{June 2014 - February 2017 | Atlanta, Georgia}
-\begin{tightemize}
-\item Acted as Lead Developer for R3’s DOME .NET web service, a tool used to provide and display data for multiple departments inside AT\&T. Implemented C\#, MSSQL, and Kapow Screen Scraping.
-\item Enhanced R3's PVC Disconnect tool using NodeJS and MongoDB.
-\item Utilized JavaScript to enhance PAL-ABS automated Router config generator.
-\item Created an Angular, Jersey, MySQL webapp that enabled Flex Force leadership to track employee individual contributions.
-\item Acted as a mentor to a group of 4 interns during Summer 2016.
-\end{tightemize}
-\sectionsep
-
-\runsubsection{Travelport}
-\descript{| Software Developer Intern }
-\location{May 2013 – May 2014 | Atlanta, Georgia}
-
+\section{Skills}
+\subsection{Programming}
+\location{\textbf{Over 2000 lines:}}
+HTML \textbullet{} Twailwind CSS \textbullet{} React JS \ \\ 
+\location{\textbf{Over 1000 lines:}}
+NodeJS \textbullet{} Javascript \\
+\textbullet{} CSS \\
+\location{\textbf{Familiar:}}
+Express \textbullet{}
+MongoDB \textbullet{ }MySQL 
+\subsection{VCS \& Build Tools}
+Git \textbullet{} CRA \textbullet{}Google Domains \textbullet{} Github/Github Actions
 \sectionsep
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     RESEARCH
+%     COURSEWORK
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Projects}
-\runsubsection{School and Personal}
-\location{| Atlanta, Georgia}
-\begin{tightemize} 
-\item Lead a development team employing Docker, Docker-Compose, Python, Flask, MySQL, and Bootstrap to construct "CorkBoardIt!", a small, Pintrest type fullstack website. 
-\item Used TypeScript to create  \href{http://npmjs.com/package/smashgg.js}{\custombold{smashgg.js}}, a comprehensive NodeJS SDK for \href{www.smash.gg}{\custombold{Smash.GG's}} public API.
-\item Used Python, AngularJS, and MongoDB to construct an automated esports ranking app, \href{https://notgarpr.com}{\custombold{NotGarPR}}.
-\item Used Python and OpenCV to construct a pattern matching AI program.
-\end{tightemize}
-\sectionsep
+\section{Coursework}
+HTML/CSS/Git \\
+Advanced CSS \\
+Javascript \\
+Web/3rd Party/Server-Side API's \\
+NodeJS \\
+OOP Programming \\
+Express \\
+SQL \\
+React \\
+MERN/State \\
+ 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SOCIETIES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\end{minipage} 
-\end{document}
+\end{minipage}%
+\end{document}  
+\documentclass[]{article}
